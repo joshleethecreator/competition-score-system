@@ -1,42 +1,37 @@
 <?php include('head.html'); ?>
 
-<h1>Pertandingan Pidato Bahasa Cina Peringkat daerah</h1>
-<p>Anjuran PPD Sungai Deras</p>
-<!--Bahagian Menu Asas.
-    Menu terbahagi kepada 3 jenis iaitu
-    1. Menu hakim dimana hakim dapat akses semua perkara
-    2. Menu peserta dimana peserta hanya boleh memeriksa
-    keputusan pertandingan. peserta perlu login.
-    3. Menu di laman utama - bagi pelawat yang tidak login
+<header class="p-3 bg-info text-white container-fluid sticky-top">
+    <div class="container-fluid">
+        <div class="d-flex flex-wrap align-items-center justify-content-between justify-content-lg-start">
+            <!-- hakim header -->
+            <?php if (!empty ($_SESSION['tahap']) and $_SESSION['tahap'] == "hakim") { ?>
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="index.php" class="nav-link px-2 text-white">Home</a></li>
+                    <li><a href="hakim-menu.php" class="nav-link px-2 text-white">Menu Hakim</a></li>
+                    <li><a href="senarai-peserta.php" class="nav-link px-2 text-white">Senarai Peserta</a></li>
+                    <li><a href="peserta-upload-borang.php" class="nav-link px-2 text-white">Upload Data Peserta Baharu</a></li>
+                    <li><a href="senarai-hakim.php" class="nav-link px-2 text-white">Senarai Hakim</a></li>
+                    <li><a href="penilaian-peserta.php" class="nav-link px-2 text-white">Penilaian Peserta</a></li>
+                    <li><a href="keputusan-individu.php" class="nav-link px-2 text-white">Keputusan Individu</a></li>
+                    <li><a href="keputusan-sekolah.php" class="nav-link px-2 text-white">Keputusan Sekolah</a></li>
+                    <li><a href="logout.php" class="nav-link px-2 text-white">Logout</a></li>
+                </ul>
+            <!-- peserta header -->
+            <?php } else if (!empty($_SESSION['tahap']) and $_SESSION['tahap'] == "peserta") { ?> 
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a class="nav-link px-2 text-white" href='peserta-menu.php'>Menu Peserta</a></li>   
+                    <li><a class="nav-link px-2 text-white" href='logout.php'>Logout</a></li>
+                </ul>
+            <?php } else { ?>
+                <!-- Home -->
+                <a href="index.php"><i class="bi bi-house-door-fill text-white text-start fs-4"></i></a>
 
-    Anda boleh menambah menu mengikut kehendak anda
--->
-
-<?php
-// # Menu Hakim
-if (!empty ($_SESSION['tahap']) and $_SESSION['tahap'] == "hakim")
-{
-echo "
-    | <a href='hakim-menu.php'>Menu Hakim</a>
-    | <a href='senarai-peserta.php'>Senarai Peserta</a>
-    | <a href='peserta-upload-borang.php'>Upload Data Peserta Baharu</a>
-    | <a href='senarai-hakim.php'>Senarai Hakim</a>
-    | <a href='penilaian-peserta.php'>Penilaian Peserta</a>
-    | <a href='keputusan-individu.php'>Keputusan Individu</a>
-    | <a href='keputusan-sekolah.php'>Keputusan Sekolah</a>
-    | <a href='logout.php'>Logout</a>";
-}
-
-// # Menu Peserta
-else if (!empty($_SESSION['tahap']) and $_SESSION['tahap'] == "peserta")
-{
-    echo "
-    | <a href='peserta-menu.php'>Menu Peserta</a>
-    | <a href='logout.php'>Logout</a>
-    | <hr>";
-
-} else {
-    // menu Laman Utama
-    echo "<a href='index.php'>Laman Utama</a><hr><br>" ;
-}
-?>
+                
+                <div class="text-end">
+                    <a href="peserta-login-borang.php" class="btn btn-outline-light me-2">Login</a>
+                    <a href="peserta-signup-borang.php" class="btn btn-warning">Sign-up</a>
+                </div>
+            <?php } ?>
+        </div>
+    </div>
+</header>

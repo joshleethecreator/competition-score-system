@@ -1,3 +1,4 @@
+   
 <?php 
 # memulakan fungsi session
 session_start();
@@ -11,12 +12,13 @@ include('fungsi.php');
 # pemboleh ubah $k mengambil nilai yang dipulangkan oleh fungsi semak
 $k=semak();
 
+echo "<div class='p-2'>";
 # jika nilai yang dipulangkan oleh fungsi semak seperti dibawah
 if($k=="Semua peserta telah dinilai.")
 {
     # arahan untuk mencari dan menyusun peserta yang mempunyai mata tertinggi
     $query_semak = "select * from peserta order by mata DESC";
-
+    
     # laksanakan proses pencarian
     $laksana = mysqli_query($condb,$query_semak);
     $bil=1;
@@ -35,4 +37,5 @@ if($k=="Semua peserta telah dinilai.")
 }
 echo $k;
 ?>
+</div>
 <?php include ('footer.php'); ?>

@@ -7,12 +7,14 @@
   include ('fungsi.php');
 ?>
 
-<h3>Senarai Peserta</h3>
-<!-- Memanggil fail butang-saiz -->
-<?php include('butang-saiz.php'); ?>
-<!-- Header jadual keputusan -->
-<table width='100%' border='1' id='saiz'>
-  <caption><?= $k =semak (); ?></caption>
+<div class="p-2">
+
+  <h3>Senarai Peserta</h3>
+  <!-- Memanggil fail butang-saiz -->
+  <?php include('butang-saiz.php'); ?>
+  <!-- Header jadual keputusan -->
+  <table width='100%' border='1' id='saiz'>
+    <caption><?= $k =semak (); ?></caption>
   <tr>
     <td>Kedudukan</td>
     <td>Sekolah</td>
@@ -28,9 +30,9 @@
     GROUP BY peserta.kod_sekolah
     order by jumlah DESC";
 
-    #laksanakan arahan mencari
-    $laksana = mysqli_query($condb, $arahan_papar);
-    $bil=0;
+#laksanakan arahan mencari
+$laksana = mysqli_query($condb, $arahan_papar);
+$bil=0;
     # Mengambil data yang ditemui
     while ($m=mysqli_fetch_array($laksana))
     {
@@ -40,7 +42,8 @@
     <td>".$m['nama_sekolah']."</td>
     <td>".$m['jumlah']."</td>
     </tr> ";
-    } 
+  } 
   ?>
 </table>
+</div>
 <?php include ('footer.php'); ?>

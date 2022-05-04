@@ -3,12 +3,12 @@ session_start();
 include ('header.php');
 include('fungsi.php');
 
-if(empty($_GET)){
-    die("<script>window.location.href='senarai-peserta.php';</script>");
-}
-?>
+// if(empty($_GET)){
+//     die("<script>window.location.href='senarai-peserta.php';</script>");
+// }
+// ?>
 
-<h3>kemaskini peserta Baru</h3>
+<h3>kemaskini peserta baru</h3>
 <form action='peserta-kemaskini-proses.php?nokp_lama=<?=$_GET['nokp']?>' method='POST'>
 
 <input type='text' name='nama' value='<?=$_GET['nama']?>' required><br>

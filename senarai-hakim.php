@@ -8,29 +8,31 @@ include('guard-hakim.php');
 include('connection.php');
 ?>
 
-<h3>Senarai hakim</h3>
-<!-- Memanggil fail butang-saiz -->
-<?php include('butang-saiz.php'); ?> 
+<div class="p-2">
 
-<!-- Navigasi untuk mendaftar hakim baru -->
-<a href='hakim-daftar-borang.php'>[+] Daftar Hakim Baru</a>
+    <h3>Senarai hakim</h3>
+    <!-- Memanggil fail butang-saiz -->
+    <?php include('butang-saiz.php'); ?> 
+    
+    <!-- Navigasi untuk mendaftar hakim baru -->
+    <a href='hakim-daftar-borang.php'>[+] Daftar Hakim Baru</a>
+    
+    <!-- Header bagi jadual untuk memaparkan senarai peserta -->
+    <table width='100%' border='1' id='saiz'> 
+        <tr> 
+            <td>Nama</td> 
+            <td>No KP</td> 
+            <td>katalaluan</td> 
+        </tr> 
+        
+        <?php 
+    # arahan query untuk mencari senarai nama hakim 
+    $arahan_papar="Select * from hakim"; 
 
-<!-- Header bagi jadual untuk memaparkan senarai peserta -->
-<table width='100%' border='1' id='saiz'> 
-    <tr> 
-        <td>Nama</td> 
-        <td>No KP</td> 
-        <td>katalaluan</td> 
-    </tr> 
+    # laksanakan arahan mencari data hakim 
+    $laksana = mysqli_query($condb,$arahan_papar); 
 
-<?php 
-# arahan query untuk mencari senarai nama hakim 
-$arahan_papar="Select * from hakim"; 
-
-# laksanakan arahan mencari data hakim 
-$laksana = mysqli_query($condb,$arahan_papar); 
-
-# Mengambil data yang ditemui 
+    # Mengambil data yang ditemui 
     while($data=mysqli_fetch_array($laksana)) 
     { 
         # memaparkan senarai nama dalam jadual 
@@ -41,6 +43,7 @@ $laksana = mysqli_query($condb,$arahan_papar);
         </tr>"; 
     }
 
-?> 
-</table>
+    ?> 
+    </table>
+</div>
 <?php include ('footer.php'); ?>

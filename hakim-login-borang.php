@@ -6,16 +6,22 @@ session_start();
 include('header.php'); 
 ?>
 
-<!-- Tajuk antaramuka log masuk hakim -->
-<h3>Login hakim</h3>
-
-<!-- borang daftar masuk (log in/sign in) hakim-->
-<form action='hakim-login-proses.php' method='POST'>
-
-    Nokp hakim    <input type='text' name='nokp'><br>
-    Katalaluan      <input type='password' name='katalaluan' ><br>
-                    <input type='submit' value='Login'>
-                    
-</form>
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-8">
+      <!--Tajuk antaramuka -->
+      <h3>Pendaftaran Peserta Baru</h3>
+      <!--Borang Pendaftaran Peserta baru_-->
+      <form class="d-flex flex-column" action='hakim-login-proses.php' method='POST'>
+        <label class="form-label">Nokp hakim:</label>
+        <input type='text' name='nokp' required> 
+        <label class="form-label">Katalaluan:</label>   
+        <input type='password' name='katalaluan' required>
+        
+        <input class="mt-2" type='submit' value='Login'>
+      </form>
+    </div>
+  </div>
+</div>
 
 <?php include ('footer.php'); ?>

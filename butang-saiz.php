@@ -22,8 +22,8 @@
 }
 </script>
 <!-- Kod untuk butang mengubah saiz tulisan -->
-<h3>ubah saiz tulisan</h3>
-<input name='reSize1' type='button' value='reset'onclick="ubahsaiz(2)" />
-<input name='reSize' type='button' value='&nbsp; +&nbsp;' onclick="ubahsaiz (1)" />
-<input name='reSize2' type='button' value='&nbsp;-&nbsp;' onclick="ubahsaiz (-1)" />
+<h3 class="my-2">Ubah Saiz Tulisan</h3>
+<input class="mb-2" name='reSize1' type='button' value='reset'onclick="ubahsaiz(2)" />
+<input class="mb-2" name='reSize' type='button' value='&nbsp; +&nbsp;' onclick="ubahsaiz (1)" />
+<input class="mb-2" name='reSize2' type='button' value='&nbsp;-&nbsp;' onclick="ubahsaiz (-1)" />
 
