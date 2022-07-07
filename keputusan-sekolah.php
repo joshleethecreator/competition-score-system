@@ -8,8 +8,7 @@
 ?>
 
 <div class="p-2">
-
-  <h3>Senarai Peserta</h3>
+  <h3>Keputusan Sekolah</h3>
   <!-- Memanggil fail butang-saiz -->
   <?php include('butang-saiz.php'); ?>
   <!-- Header jadual keputusan -->
@@ -45,5 +44,6 @@ $bil=0;
   } 
   ?>
 </table>
+<button onclick="window.print()" type="submit" name="print" class="btn">Print</button>
 </div>
 <?php include ('footer.php'); ?>

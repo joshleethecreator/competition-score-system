@@ -26,7 +26,7 @@ if (!empty($_POST))
       $query_login = "INSERT INTO `peserta` 
       (`nokp_peserta`, `nama_peserta`, `katalaluan_peserta`, `kod_sekolah`, `nokp_hakim`, `mata`) 
       VALUES 
-      ('$nokp', '$nama', '$katalaluan', '$sekolah', 1, 0);";
+      ('$nokp', '$nama', '$katalaluan', '$sekolah', 123456789012, 0);";
 
       // Melaksanakan Arahan Menyimpan data Peserta baru
       $laksana_query = mysqli_query($condb, $query_login);

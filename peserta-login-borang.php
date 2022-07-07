@@ -14,9 +14,11 @@ include('header.php');
       <!--Borang Pendaftaran Peserta baru_-->
       <form class="d-flex flex-column" action='peserta-login-proses.php' method='POST'>
         <label class="form-label">Nokp Peserta:</label>
-        <input type='text' name='nokp' required> 
+        <input class="form-control" type='text' name='nokp' placeholder="cth:050422070451" pattern="[0-9]{12}"
+  oninvalid="this.setCustomValidity('Sila masukkan 12 digit nombor sahaja')" oninput="this.setCustomValidity('')"
+ required required> 
         <label class="form-label">Katalaluan:</label>   
-        <input type='password' name='katalaluan' required>
+        <input class="form-control" type='password' name='katalaluan' required>
         
         <input class="mt-2" type='submit' value='Login'>
       </form>

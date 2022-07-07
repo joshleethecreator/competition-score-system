@@ -22,7 +22,7 @@ function semak(){
 function senarai_sekolah()
 {
     include ('connection.php');
-    $arahan = "Select* from sekolah";
+    $arahan = "Select * from sekolah";
     $laksana=mysqli_query($condb,$arahan);
     $list="";
     while($m=mysqli_fetch_array($laksana))
@@ -30,8 +30,9 @@ function senarai_sekolah()
     $list=$list."<option value='".$m['kod_sekolah']."'>
     ".$m['nama_sekolah']."</option>";
     }
-        return $list;
+    return $list;
 }
+
 // Fungi untuk memaparkan keputusan individu
 function keputusan_individu()
 {

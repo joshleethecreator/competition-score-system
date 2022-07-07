@@ -1,18 +1,14 @@
 <?php 
 # memulakan fungsi session
 session_start();
-
 # Memanggil fail header, guard-hakim, connection dan fungsi
 include('header.php');
 include('guard-hakim.php');
 include('connection.php');
 include ('fungsi.php');
 ?>
-
 <div class="p-2">
-
     <h3>Keputusan Individu</h3>
-    
     <!-- Memanggil fail butang-saiz -->
     <?php include('butang-saiz.php'); ?> 
     <!-- Header jadual keputusan -->
@@ -26,7 +22,6 @@ include ('fungsi.php');
         <td>Nama Hakim Penilai</td> 
         <td>Mata</td> 
     </tr> 
-    
     <?php 
 # arahan query untuk mencari senarai nama peserta 
 $arahan_papar="SELECT* FROM peserta
@@ -56,5 +51,6 @@ while($m=mysqli_fetch_array($laksana))
 
 ?> 
 </table>
+<button onclick="window.print()" type="submit" name="print" class="btn">Print</button>
 </div>
 <?php include ('footer.php'); ?>

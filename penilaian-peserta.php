@@ -8,16 +8,15 @@ include('guard-hakim.php');
 include('connection.php');
 ?>
 <div class="p-2">
-
     <!-- Tajuk Laman -->
-    <h3>Senarai Peserta</h3>
+    <h3>Penilaian Peserta</h3>
 
     <!-- Boarang carian nama peserta -->
     <form action='' method='POST'>
-    Carian Peserta  <br>
-    Nama Peserta    <input type='text' name='nama'>
-    <input type='submit' value='Cari'>
-</form>
+        Carian Peserta  <br>
+        Nama Peserta    <input type='text' name='nama'>
+        <input type='submit' value='Cari'>
+    </form> 
 
 <!-- Header jadual bagi memaparkan senarai peserta -->
 <table width='100%' border='1'> 

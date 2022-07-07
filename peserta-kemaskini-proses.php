@@ -19,7 +19,7 @@ if (!empty($_POST)) {
     katalaluan_peserta = '" . $_POST['katalaluan'] . "',
     kod_sekolah = '" . $_POST['kod_sekolah'] . "'
     Where
-    nokp_peserta = '" . $_POST['nokp'] . "'";
+    nokp_peserta = '" . $_GET['nokp_lama'] . "'";
 
     #melaksana dan menyemak proses kemaskini
     if (mysqli_query($condb, $arahan)) {

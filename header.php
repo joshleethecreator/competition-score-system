@@ -1,7 +1,8 @@
 <?php include('head.html'); ?>
-
-<header class="p-3 bg-info text-white container-fluid sticky-top">
-    <div class="container-fluid">
+<div class="container-fluid bg-success"><img style="margin: 10px 0 ;padding-left: 370px ;height: 200px; width: 75%;" src="./images/header-banner.jpg" alt="header-img"></div>
+<header class="bg-info text-white container-fluid">
+   
+    <div class="container-fluid p-3 ">
         <div class="d-flex flex-wrap align-items-center justify-content-between justify-content-lg-start">
             <!-- hakim header -->
             <?php if (!empty ($_SESSION['tahap']) and $_SESSION['tahap'] == "hakim") { ?>

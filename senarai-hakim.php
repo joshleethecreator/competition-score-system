@@ -1,22 +1,17 @@
 <?php 
 # memulakan fungsi session
 session_start();
-
 # memanggil fail header, guard-hakim dan connection
 include('header.php');
 include('guard-hakim.php');
 include('connection.php');
 ?>
-
 <div class="p-2">
-
     <h3>Senarai hakim</h3>
     <!-- Memanggil fail butang-saiz -->
     <?php include('butang-saiz.php'); ?> 
-    
     <!-- Navigasi untuk mendaftar hakim baru -->
     <a href='hakim-daftar-borang.php'>[+] Daftar Hakim Baru</a>
-    
     <!-- Header bagi jadual untuk memaparkan senarai peserta -->
     <table width='100%' border='1' id='saiz'> 
         <tr> 
@@ -28,10 +23,8 @@ include('connection.php');
         <?php 
     # arahan query untuk mencari senarai nama hakim 
     $arahan_papar="Select * from hakim"; 
-
     # laksanakan arahan mencari data hakim 
     $laksana = mysqli_query($condb,$arahan_papar); 
-
     # Mengambil data yang ditemui 
     while($data=mysqli_fetch_array($laksana)) 
     { 
@@ -42,8 +35,8 @@ include('connection.php');
         <td>".$data['katalaluan_hakim']."</td> 
         </tr>"; 
     }
-
     ?> 
     </table>
+    <button onclick="window.print()" type="submit" name="print" class="btn">Print</button>
 </div>
 <?php include ('footer.php'); ?>

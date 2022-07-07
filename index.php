@@ -9,7 +9,8 @@ include ('fungsi.php');
 <div class="container-fluid bg-danger position-relative">
     <img 
         class="mx-auto d-block"
-        src="https://www.languagecouncils.sg/mandarin/ch/-/media/smc/images/homepage/banner1.ashx?as=1&mw=1100"
+        style="height: 500px;"
+        src="./images/hero-image.jpg"
         alt="hero-img"
     >
 
@@ -41,8 +42,8 @@ include ('fungsi.php');
                 </div>
             </div>
             <!-- img -->
-            <div class="col-6 mh-100">
-                <img class="img-fluid rounded-circle border border-5" src="https://www.languagecouncils.sg/mandarin/ch/-/media/smc/images/homepage/discover-more2.ashx?la=zh-sg" alt="lion img">
+            <div class="col-4 mh-100" >
+                <img class="img-fluid rounded-circle border border-5" src="./images/lion-head.png" alt="lion img">
             </div>
         </div>
     </div>
@@ -51,7 +52,7 @@ include ('fungsi.php');
 <section>
     <h2 class="text-center bg-success py-2">Terma & Syarat Pertanding</h2>
 
-    <div class="container-lg">
+    <div class="container-lg ">
         <div class="row justify-content-evenly">
             <div class="col-6">
                 <div class="card">
@@ -60,8 +61,6 @@ include ('fungsi.php');
                         ">Kategori Individu</h4>
                         <li class="card-text">Terbuka kepada semua warganegara Malaysia berumur 10 tahun ke bawah</li>
                         <li class="card-text">Setiap Peserta hanya boleh menghantar SATU(1) penyertaan sahaja</li>
-                        <li class="card-text">Durasi Video tidak melebihi 10 minit</li>
-                        <li class="card-text">Muat naik video anda ke youtube dan masukkan link tersebut semasa pendaftaran</li>
                         <li class="card-text">Tarikh tutup penyertaan pada 30 September 2021 12.00 tengah malam</li>
                     </div>
                 </div>
@@ -95,6 +94,7 @@ include ('fungsi.php');
         //  dan papar keputusan 5 individu terbaik. 
         //  Bilangan pemenang anda boleh ubah di fail fungsi.php
         keputusan_individu();
+        echo '<button onclick="window.print()" type="submit" name="print" class="btn">Print</button>';
     }
     else
     { ?>   
@@ -113,6 +113,7 @@ include ('fungsi.php');
             # panggi fungsi keputusan sekolah dari fail fungsi 
             # dan paparkan keputusan keseluruhan sekolah
             keputusan_sekolah();
+            echo '<button onclick="window.print()" type="submit" name="print" class="btn">Print</button>';
         }
         else
         {

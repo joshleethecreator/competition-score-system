@@ -2,3 +2,6 @@ hero img url:
 https://www.languagecouncils.sg/mandarin/ch/-/media/smc/images/homepage/banner1.ashx?as=1&mw=1100
 lion head url:
 https://www.languagecouncils.sg/mandarin/ch/-/media/smc/images/homepage/discover-more2.ashx?la=zh-sg
+
+
+<div class="banner-carousel-item-background" style="background-image: url(/mandarin/en/-/media/2019-slogan_banner.png?as=1&amp;mw=1100)"></div>
