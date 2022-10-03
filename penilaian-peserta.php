@@ -1,7 +1,6 @@
 <?php 
 # memulakan fungsi session
 session_start();
-
 # memanggil fail header, guard-hakim dan connection
 include('header.php');
 include('guard-hakim.php');
@@ -10,14 +9,12 @@ include('connection.php');
 <div class="p-2">
     <!-- Tajuk Laman -->
     <h3>Penilaian Peserta</h3>
-
     <!-- Boarang carian nama peserta -->
     <form action='' method='POST'>
         Carian Peserta  <br>
         Nama Peserta    <input type='text' name='nama'>
         <input type='submit' value='Cari'>
     </form> 
-
 <!-- Header jadual bagi memaparkan senarai peserta -->
 <table width='100%' border='1'> 
     <tr> 
@@ -27,7 +24,6 @@ include('connection.php');
         <td>Hakim Penilai</td>  
         <td>Penilaian</td> 
     </tr> 
-    
     <?php 
 $tambahan="";
 if(!empty($_POST['nama']))
@@ -42,10 +38,8 @@ LEFT JOIN hakim
 ON peserta.nokp_hakim = hakim.nokp_hakim
 $tambahan
 order by peserta.mata"; 
-
 # laksanakan arahan mencari data peserta 
 $laksana = mysqli_query($condb,$arahan_papar); 
-
 # Mengambil data yang ditemui 
 while($m=mysqli_fetch_array($laksana)) 
 { 
@@ -56,7 +50,6 @@ while($m=mysqli_fetch_array($laksana))
         <td>".$m['nama_sekolah']."</td> 
         <td>".$m['nama_hakim']."</td>
         <td>
-        
         <form action='penilaian-proses.php' method='POST'>
         <input type='hidden' value='".$m['nokp_peserta']."' name='nokp'>
         <input type='text' name='mata' value='".$m['mata']."' size='5' required>

@@ -44,6 +44,6 @@ $bil=0;
   } 
   ?>
 </table>
-<button onclick="window.print()" type="submit" name="print" class="btn">Print</button>
+<button onclick="window.print()" type="submit" name="print" class="btn-primary">Print</button>
 </div>
 <?php include ('footer.php'); ?>
